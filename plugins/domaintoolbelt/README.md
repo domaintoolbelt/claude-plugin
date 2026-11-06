@@ -20,7 +20,7 @@ In Cowork, add the GitHub repository domaintoolbelt/claude-plugin as a plugin ma
 | `/domaintoolbelt:hunt 24` | Names from a prefix, suffix or word, live-checked and ranked | about 15 |
 | `/domaintoolbelt:brief` | Today's auctions for your Keyword Watch words, priced against recent results | about 12 |
 | `/domaintoolbelt:trends` | Rising words and names to register with them | about 20 |
-| `/domaintoolbelt:alerts` | Keyword Watches and watched domains, set up in chat | about 5 |
+| `/domaintoolbelt:alerts` | What is new in your alerts and Keyword Watches; add watches in chat | about 5 to 15 |
 
 You can also just ask, for example "is brewly.com worth $2,000?", and the right workflow runs.
 

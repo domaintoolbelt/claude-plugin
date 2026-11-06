@@ -1,25 +1,36 @@
 ---
 name: alerts
-description: Set up DomainToolBelt alerts in chat - Keyword Watches, watched domains and an alert webhook. Use when someone wants to be told about new auctions, drops or sales for a word, wants to watch a domain, or says /domaintoolbelt:alerts.
+description: Check what is new in DomainToolBelt alerts - unread alerts, new Keyword Watch matches and changes on watched domains - and help add watches when asked. Use when someone asks what is new, checks their alerts or watches, wants to watch a word or domain, or says /domaintoolbelt:alerts.
 ---
 
-# Set up my alerts
+# Check my alerts
 
-Help the user set up alerts by chatting, then change their account only after they say yes.
+By default, show what is new since the last check. Only set up new watches when the user asks for that.
 
-Needs a signed-in DomainToolBelt account with Full access. A Read only sign-in cannot change anything: if a change is refused for that reason, tell the user to reconnect with Full access.
+Needs a signed-in DomainToolBelt account.
 
-## Steps
+## Steps: what is new (default)
 
-1. Read what is there: **list_keyword_watches** and **list_watched_domains**.
-2. Ask what they want to follow, in one question: words (e.g. "coffee", "ai"), specific domains they would like to own, or both.
-3. Suggest the setup in a short list: each keyword with its endings, each domain to watch. Mention their plan limit if the tools return it.
-4. **Wait for the user to confirm.** Then call **add_keyword_watch** for each keyword and **watch_domain** for each domain. If a limit is reached, stop and say which ones were added.
-5. Webhook (paid API plans only), only if they ask: **set_webhook** with their https URL, then **test_webhook**. Never show the signing secret.
+1. **list_alerts** with unread_only=true. These are the new alerts for watched domains and keywords.
+2. **list_keyword_watches**. For each watch, **get_keyword_watch_matches** with limit=20 and keep only rows marked new. Skip watches with nothing new. With more than 5 watches, check the 5 with alerts turned on first and say how many were left out.
+3. Do not call anything else unless the user asks about one name (then use /domaintoolbelt:check).
 
 ## Answer
 
-What was added, what was already there, and what was skipped and why. Then one line: alerts show in the dashboard and go out by the channels set in their account settings, and /domaintoolbelt:brief summarises them each morning.
+Start with one line: "N new alerts, M new matches across K watches", or "Nothing new since your last check."
+
+Then group by watch or domain, newest first. For each item: the name, what happened (in auction, dropping, for sale, sold, owner or nameserver change), the price and the end time if any, and its link. Mark the 3 best with "Worth a look" and say why in a few words.
+
+End with one line asking if they want the alerts marked as read. Call **mark_alerts_read** only after they say yes.
+Do not suggest new watches unless nothing is new and they have fewer than 2 watches. Then offer it in one line.
+
+## Adding watches (only when asked)
+
+Needs a Full access sign-in. If a change is refused as read only, tell the user to reconnect with Full access.
+
+1. Suggest each keyword with its endings and each domain to watch, in a short list.
+2. **Wait for the user to confirm.** Then call **add_keyword_watch** or **watch_domain** for each. If a plan limit is reached, stop and say which ones were added.
+3. Webhook (paid API plans only), only if they ask: **set_webhook** with their https URL, then **test_webhook**. Never show the signing secret.
 
 Never remove a watch or a saved domain unless the user asks for that exact one.
 
