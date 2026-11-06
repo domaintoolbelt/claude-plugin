@@ -1,5 +1,6 @@
 {
   "name": "domaintoolbelt",
+  "displayName": "DomainToolBelt",
   "version": "1.1.0",
   "description": "Domain sales, auctions, drops and live availability from DomainToolBelt, plus ready-made workflows for domain investors.",
   "author": {
@@ -19,5 +20,8 @@
     "mcp"
   ],
   "privacyPolicyUrl": "https://domaintoolbelt.com/privacy-policy",
-  "icon": ".claude-plugin/icon.png"
+  "icon": ".claude-plugin/icon.png",
+  "documentationUrl": "https://domaintoolbelt.com/apis/mcp-server",
+  "supportUrl": "https://domaintoolbelt.com/contact",
+  "termsOfServiceUrl": "https://domaintoolbelt.com/terms"
 }
