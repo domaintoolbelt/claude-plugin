@@ -21,6 +21,9 @@ In Cowork, add the GitHub repository domaintoolbelt/claude-plugin as a plugin ma
 | `/domaintoolbelt:brief` | Today's auctions for your Keyword Watch words, priced against recent results | about 12 |
 | `/domaintoolbelt:trends` | Rising words and names to register with them | about 20 |
 | `/domaintoolbelt:alerts` | What is new in your alerts and Keyword Watches; add watches in chat | about 5 to 15 |
+| `/domaintoolbelt:triage brewly.com, coffeefleet.ai, ...` | Keep or drop for up to 20 names, with availability and demand | about 2 per name |
+| `/domaintoolbelt:drops coffee` | Names about to drop for a keyword, best first | about 4 |
+| `/domaintoolbelt:sales coffee` | What similar names sold for and a typical price range | about 3 (paid plans: 1 to 2 data queries) |
 
 You can also just ask, for example "is brewly.com worth $2,000?", and the right workflow runs.
 
