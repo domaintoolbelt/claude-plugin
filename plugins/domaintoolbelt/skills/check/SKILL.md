@@ -29,7 +29,7 @@ Start with one line: **Buy**, **Bid up to $X**, **Make an offer up to $X** or **
 
 Then a short table:
 
-| | |
+| Item | Detail |
 |---|---|
 | Status | registered since YYYY, expires YYYY-MM-DD, registrar |
 | Price now | asking price, current bid, or "not for sale" |
@@ -43,6 +43,7 @@ End with the domaintoolbelt.com link for the domain.
 
 ## Rules for every answer
 
+- If the DomainToolBelt tools are missing or a call says to sign in, stop and tell the person: run /mcp, pick domaintoolbelt, choose Authenticate, sign in with a domaintoolbelt.com account (a free one works), then ask again.
 - Use only the DomainToolBelt tools (server "domaintoolbelt"). Make the fewest calls that answer the question and never repeat a call whose answer you already have.
 - If a tool says it needs a paid plan, skip it, keep going with the rest, and give the domaintoolbelt.com link it returned instead.
 - If a tool says credits or the daily limit ran out, stop, say so in one line and do not retry.
