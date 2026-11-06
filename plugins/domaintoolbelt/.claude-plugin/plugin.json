@@ -1,0 +1,23 @@
+{
+  "name": "domaintoolbelt",
+  "version": "1.0.0",
+  "description": "Domain sales, auctions, drops and live availability from DomainToolBelt, plus ready-made workflows for domain investors.",
+  "author": {
+    "name": "DomainToolBelt",
+    "url": "https://domaintoolbelt.com"
+  },
+  "homepage": "https://domaintoolbelt.com/mcp",
+  "repository": "https://github.com/domaintoolbelt/claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "domains",
+    "domain names",
+    "auctions",
+    "expired domains",
+    "domain sales",
+    "availability",
+    "mcp"
+  ],
+  "privacyPolicyUrl": "https://domaintoolbelt.com/privacy-policy",
+  "icon": ".claude-plugin/icon.png"
+}

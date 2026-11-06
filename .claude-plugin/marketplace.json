@@ -1,0 +1,18 @@
+{
+  "name": "domaintoolbelt",
+  "owner": {
+    "name": "DomainToolBelt"
+  },
+  "metadata": {
+    "description": "DomainToolBelt plugins for Claude Code and Cowork."
+  },
+  "plugins": [
+    {
+      "name": "domaintoolbelt",
+      "source": "./plugins/domaintoolbelt",
+      "description": "Domain sales, auctions, drops and live availability, plus ready-made workflows: due diligence, name hunt, auction brief, trend scout and alert setup.",
+      "category": "productivity",
+      "homepage": "https://domaintoolbelt.com/mcp"
+    }
+  ]
+}

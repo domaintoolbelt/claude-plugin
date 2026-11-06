@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "domaintoolbelt": {
+      "type": "http",
+      "url": "https://mcp.domaintoolbelt.com/account",
+      "headers": { "X-DTB-Client": "claude-plugin" }
+    }
+  }
+}
